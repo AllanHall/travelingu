@@ -51,10 +51,14 @@ body {
   color: #f7fff7;
 }
 
-.navLink:hover {
-  color: #fd5e53;
-}
-
 .navLink:visited {
   color: #f7fff7;
+}
+
+.navLink:hover {
+  color: #fd5e53;
+  font-weight: bold;
+  background-color: #f7fff7;
+  font-size: 22px;
+  margin-bottom: 0.5rem;
 }
