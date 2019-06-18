@@ -6,13 +6,15 @@ class NavBar extends Component {
   render() {
     return (
       <>
-        <header className="title">
-          <img className="logo" src={Logo} />
-        </header>
-        <div className="nav">
-          <Link className="navLink" to="/Register">
-            <div>Register</div>
-          </Link>
+        <div className="navBar">
+          <header className="title">
+            <img className="logo" src={Logo} alt="travelingo logo" />
+          </header>
+          <div className="nav">
+            <Link className="navLink" to="/Register">
+              <div>Register</div>
+            </Link>
+          </div>
         </div>
       </>
     )

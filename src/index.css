@@ -17,12 +17,17 @@ body {
 
 /* Title and Nav Bar */
 
+.navBar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .title {
   text-align: center;
   color: #303036;
   background-color: #fd5e53;
-  text-shadow: -1.6px 0 #1fb6ec, 0 1.6px #1fb6ec, 1.6px 0 #1fb6ec,
-    0 -1.6px #1fb6ec;
   letter-spacing: 1px;
 }
 
@@ -58,6 +63,54 @@ body {
   color: #fd5e53;
   font-weight: bold;
   background-color: #f7fff7;
-  font-size: 22px;
   margin-bottom: 0.5rem;
+}
+
+/* Home Page */
+.map {
+  border: 1px solid black;
+  width: 40rem;
+  height: 30rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+}
+
+.list {
+  text-align: center;
+  list-style: none;
+  margin-right: 3rem;
+}
+
+.list > li {
+  border: 1px solid black;
+}
+
+/* Registration Page */
+
+.register {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  margin: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  font-size: 14px;
+}
+
+.textArea {
+  width: 18rem;
+  height: 5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
