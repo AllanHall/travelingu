@@ -98,6 +98,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 .inputField {
@@ -105,6 +106,11 @@ body {
   margin-left: 3rem;
   margin-right: 3rem;
   font-size: 14px;
+  border-radius: 4px;
+}
+
+.select {
+  font-size: 16px;
 }
 
 .textArea {
@@ -113,4 +119,61 @@ body {
   border-radius: 5px;
   margin-bottom: 1rem;
   margin-top: 1rem;
+}
+
+.submitButton {
+  margin: 1rem;
+}
+
+/* Form Buttons */
+
+.div {
+  height: 100%;
+}
+.div {
+  text-align: center;
+}
+.div:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.updateButton {
+  background: #1fb6ec;
+  color: #fff;
+  border: none;
+  position: relative;
+  height: 32px;
+  font-size: 1.4em;
+  padding: 0 0.8em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+.updateButton:hover {
+  background: #fff;
+  color: #1fb6ec;
+}
+.updateButton:before,
+.updateButton:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #1fb6ec;
+  transition: 400ms ease all;
+}
+.updateButton:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.updateButton:hover:before,
+.updateButton:hover:after {
+  width: 100%;
+  transition: 1200ms ease all;
 }

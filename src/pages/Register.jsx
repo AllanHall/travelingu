@@ -26,11 +26,13 @@ export default function Register() {
           <input className="inputField" type="text" placeholder="address" />
         </div>
         <div>
-          <input
-            className="inputField"
-            type="text"
-            placeholder="language spoken"
-          />
+          <select className="select">
+            <option>English</option>
+            <option>Spanish</option>
+            <option>French</option>
+            <option>German</option>
+            <option>Chinese</option>
+          </select>
           <input className="inputField" type="text" placeholder="website URL" />
         </div>
         <textarea
@@ -38,8 +40,13 @@ export default function Register() {
           type="text"
           placeholder="location description"
         />
-        <button>Submit</button>
+        <div className="div">
+          <button className="updateButton">Submit</button>
+        </div>
       </form>
+      <div className="div">
+        <button className="updateButton">Update Your Information</button>
+      </div>
     </>
   )
 }
