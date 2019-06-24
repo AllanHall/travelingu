@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1/3:CRS84" }
+  },
+  "features": [
+    {
+      "properties": {
+        "Location_Id": 1,
+        "Name": "Casita Taqueria",
+        "Address": "2663 Central Ave",
+        "Language": "Spanish",
+        "Description": "Casitas has dope food",
+        "FirstName": "Juanita",
+        "LastName": "Vasquez",
+        "WebsiteURL": "http://www.casitatacos.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.77118, -82.66978]
+      }
+    },
+    {
+      "properties": {
+        "Location_Id": 2,
+        "Name": "Nueva Cantina",
+        "Address": "1625 4th St S",
+        "Language": "Spanish",
+        "Description": "Their Jalapeno margarita is amazing",
+        "FirstName": "Jose",
+        "LastName": "Jalapeno",
+        "WebsiteURL": "https://www.nuevacantina.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [27.75433, -82.63884]
+      }
+    }
+  ]
+}
