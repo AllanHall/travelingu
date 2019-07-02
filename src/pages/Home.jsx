@@ -11,10 +11,8 @@ export default function Home() {
   const [selectedSite, setSelectedSite] = useState(null)
   const [viewport, setViewport] = useState({
     latitude: 27.76,
-    longitude: -82.64,
-    width: '70vw',
-    height: '70vh',
-    zoom: 11
+    longitude: -82.66,
+    zoom: 10
   })
   return (
     <>
@@ -22,6 +20,8 @@ export default function Home() {
       <div className="map">
         <ReactMapGL
           {...viewport}
+          height="100%"
+          width="100%"
           mapboxApiAccessToken={TOKEN}
           mapStyle="mapbox://styles/allamallan/cjx6aopuo3nzi1cqoy74266u6"
           onViewportChange={viewport => {
@@ -54,7 +54,9 @@ export default function Home() {
               }}
             >
               <div>
-                <h3>{selectedSite.properties.Name}</h3>
+                <a href={`#${selectedSite.properties.Name}`}>
+                  <h3>{selectedSite.properties.Name}</h3>
+                </a>
                 <p>{selectedSite.properties.Description}</p>
               </div>
             </Popup>
@@ -62,22 +64,28 @@ export default function Home() {
         </ReactMapGL>
       </div>
       <ul className="list">
-        <li>
-          <h2>Business 1</h2>
-          <h2>Name of person</h2>
-          <p>Language</p>
-          <p>Address</p>
-          <p>description</p>
-          <p>website</p>
-        </li>
-        <li>
-          <h2>Business 2</h2>
-          <h2>Name of person</h2>
-          <p>Language</p>
-          <p>Address</p>
-          <p>description</p>
-          <p>website</p>
-        </li>
+        {mockData.features.map(site => {
+          return (
+            <li>
+              <a className="secondLink" id={site.properties.Name}>
+                <h2>{site.properties.Name}</h2>
+              </a>
+              <h2>
+                {site.properties.FirstName} {site.properties.LastName}
+              </h2>
+              <p>{site.properties.Language}</p>
+              <p>{site.properties.Address}</p>
+              <p>{site.properties.Description}</p>
+              <a
+                href={site.properties.WebsiteURL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p>{site.properties.WebsiteURL}</p>
+              </a>
+            </li>
+          )
+        })}
       </ul>
     </>
   )

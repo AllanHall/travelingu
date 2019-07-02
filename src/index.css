@@ -6,13 +6,38 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #efefef;
+  min-width: 100%;
+  position: relative;
+  display: block;
   font-family: 'Karla', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  background-attachment: fixed;
+}
+
+body::after {
+  content: '';
+  background: url('./images/sunset.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 0;
+  background-attachment: fixed;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  margin-bottom: -4rem;
+  margin-top: -12rem;
 }
 
 /* Title and Nav Bar */
@@ -22,24 +47,42 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 7;
 }
 
 .title {
   text-align: center;
   color: #303036;
-  background-color: #fd5e53;
+  background-color: #faa4c5;
   letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+
+.title:before,
+.title:after {
+  content: '';
+  border-bottom: 2.45px solid #f7fff7;
+  margin: 0 2vw 0 2vw;
+  flex: 1 0 20px;
+  margin-bottom: 2.5rem;
+}
+
+.title:after {
+  margin: 0 2vw 0 0;
+  margin-bottom: 2.5rem;
 }
 
 .nav {
-  background-color: #1fb6ec;
+  background-color: #42bbe7;
   font-size: 20px;
   color: #f7fff7;
   text-align: center;
   height: 4vh;
   letter-spacing: 0.5px;
   padding-top: 0.3rem;
+  display: flex;
+  justify-content: center;
 }
 
 .logo {
@@ -50,6 +93,8 @@ body {
 
 .navLink {
   text-decoration: none;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .navLink:link {
@@ -61,18 +106,19 @@ body {
 }
 
 .navLink:hover {
-  color: #fd5e53;
+  color: #f87ead;
   font-weight: bold;
-  background-color: #f7fff7;
   margin-bottom: 0.5rem;
 }
 
 /* Home Page */
 .map {
-  margin-left: 15vw;
+  display: block;
+  margin: 0 auto;
   margin-top: 10rem;
-  margin-right: 14.4vw;
   border: 3px solid black;
+  width: 60vw;
+  height: 60vh;
 }
 
 .markerBtn {
@@ -89,12 +135,41 @@ body {
 .list {
   text-align: center;
   list-style: none;
-  margin-right: 5rem;
-  margin-left: 2 rem;
+  padding-inline-start: 0px;
+  margin-left: 17rem;
+  margin-right: 17rem;
+  background-color: hsl(0, 0%, 94%, 0.7);
 }
 
 .list > li {
   border: 1px solid black;
+  font-weight: bold;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: #f87ead;
+}
+
+.secondLink {
+  font-weight: bold;
+}
+
+.secondLink:hover {
+  color: black;
 }
 
 /* Registration Page */
@@ -103,6 +178,8 @@ body {
   text-align: center;
   font-size: 36px;
   font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .form {
@@ -115,14 +192,38 @@ body {
 
 .inputField {
   margin: 1rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  font-size: 14px;
+  border-radius: 50px;
+  padding: 0.3rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  background-color: hsl(0, 0%, 100%, 0.5);
+}
+
+.inputFieldWeb {
+  margin: 1rem;
   margin-left: 3rem;
   margin-right: 3rem;
   font-size: 14px;
-  border-radius: 4px;
+  border-radius: 50px;
+  padding: 0.3rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+  width: 40vw;
+  background-color: hsl(0, 0%, 100%, 0.7);
 }
 
 .select {
-  font-size: 16px;
+  font-size: 18px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  border-radius: 9px 9px 9px 9px;
+  box-shadow: 1px 1px 11px white;
+  background-color: #1fb6ec;
+  color: white;
 }
 
 .textArea {
@@ -131,6 +232,9 @@ body {
   border-radius: 5px;
   margin-bottom: 1rem;
   margin-top: 1rem;
+  font-size: 14px;
+  background-color: hsl(0, 0%, 100%, 0.6);
+  text-align: center;
 }
 
 .submitButton {
@@ -188,4 +292,95 @@ body {
 .updateButton:hover:after {
   width: 100%;
   transition: 1200ms ease all;
+}
+
+/* Splash Page */
+
+.container {
+  background-color: #f78eb6;
+  height: 82vh;
+  width: 82vw;
+  opacity: 0.65;
+  margin-left: 11vw;
+  margin-top: 9vh;
+  border-radius: 70px;
+}
+
+.description {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  letter-spacing: 0.4px;
+  text-indent: 32px;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.splashTitle {
+  text-align: center;
+  color: black;
+  font-size: 64px;
+  font-style: italic;
+  font-weight: bold;
+  padding-top: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.splashLogo {
+  height: 9rem;
+  width: 34rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 4vh;
+}
+
+.splashButton {
+  height: 50px;
+  font-size: 2em;
+  padding: 0 1.2em;
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+  margin-top: 2rem;
+  z-index: 1;
+}
+
+@media screen and (max-width: 650px) {
+  .map {
+    height: 50vh;
+    width: 80vw;
+  }
+  .list {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 514px) {
+  .register-div {
+    margin-left: 25vw;
+  }
+  .title:before,
+  .title:after {
+    border-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register-div {
+    margin-left: 20vw;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .register-div {
+    margin-left: 19vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .register-div {
+    margin-left: 10vw;
+  }
 }

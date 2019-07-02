@@ -14,6 +14,9 @@ class NavBar extends Component {
             <Link className="navLink" to="/Register">
               <div>Register</div>
             </Link>
+            <Link className="navLink" to="/">
+              <div>Login</div>
+            </Link>
           </div>
         </div>
       </>
